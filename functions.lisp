@@ -1,0 +1,22 @@
+(setf num-array (make-array`(10)))
+(write-line "Please input 10 numbers to be added together, pressing enter after each one.")
+
+(dotimes (itr 10)
+    (setf (aref num-array itr) (read))
+)
+
+(defun add-array (arr)
+    (setf len (length arr))
+    (setf sum 0)
+    (dotimes (n len)
+        (setf sum (+ sum (aref arr n)))
+    )
+    (write "Sum of array: ")
+    (write sum)
+    (terpri)
+)
+
+(write "Your array: ")
+(write num-array)
+(terpri)
+(add-array num-array)
