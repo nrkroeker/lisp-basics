@@ -12,7 +12,9 @@ An introductory set of examples in LISP
 - Will output numbers from 0 to the inputted number
 
 ## Functions
-
+- Run file with `clisp functions.lisp`
+- Input 10 integers
+- Will output the sum of those integers
 
 ## Arrays
 - Run file with `clisp arrays.lisp`
