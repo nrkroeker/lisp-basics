@@ -1,7 +1,7 @@
 (write-line "Welcome to the pet generator! Here is your randomly created pet: ")
 
 (defun build-pet (type color name age)
-    (list (cons :type type) (cons :color color) (cons :name name) (cons :age age))
+    (list (cons "Type" type) (cons "Color" color) (cons "Name" name) (cons "Age" age))
 )
 
 (defun get-num (max)
@@ -17,5 +17,16 @@
     (nth i items)       
 )
 
+(defun print-pet (pet)
+    (when pet
+        (setf item (car pet))
+        (write (car item))
+        (write ": ")
+        (write (cdr item))
+        (terpri)
+        (print-pet (cdr pet))
+    )
+)
+
 (setf pet (build-pet (get-item types) (get-item colors) (get-item names) (+ 1 (get-num 10))))
-(write pet)
+(print-pet pet)
