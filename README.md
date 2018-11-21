@@ -22,5 +22,5 @@ An introductory set of examples in LISP
 - Will output the array you entered
 
 ## Lists
-
-
+- Run file with `clisp lists.lisp`
+- Will output a randomly generated pet
