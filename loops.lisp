@@ -1,10 +1,10 @@
-(write-line "Please input the number you would like me to count up to, then press enter")
-(defvar count (read))
+(write-line "Input 10 numbers to put into an array, pressing enter after each one")
 
-(defvar itr 0)
-(loop
-     (setq itr (+ itr 1))
-     (write itr)
-     (terpri)
-     (when (= count itr) (return itr))
- )
+(setf num-array (make-array'(10)))
+(dotimes (itr 10)
+    (setf (aref num-array itr) (read))
+)
+
+(write "Your array: ")
+(write num-array)
+(terpri)
